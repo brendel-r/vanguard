@@ -522,7 +522,7 @@ footer p {
     #services article {
         padding: 2rem;
     }
-    
+
     .service-grid {
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -570,5 +570,68 @@ footer p {
 
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width: 1024px) {
-    
+  #mobile-nav.show {
+padding-right: 10rem;
+}  
+
+#bar-chart {
+    gap: 4.5rem;
+}
+
+#contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 95%;
+    margin: 0 auto;
   }
+
+  .form-left, 
+  .form-right {
+    display: flex;
+    flex-direction: column;
+  
+  }
+
+  .form-left input,
+  .form-right input,
+  .form-right textarea,
+  .form-right button {
+    width: 100%;
+  }
+
+.form-left label:nth-of-type(1),
+.form-left input:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.form-right label:nth-of-type(1),
+.form-right input:nth-of-type(1) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.form-left label:nth-of-type(2),
+.form-left input:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.form-right label:nth-of-type(2),
+.form-right input:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.form-left label:nth-of-type(3),
+.form-left textarea:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.form-right button {
+  grid-column: 2;
+  grid-row: 3;
+  align-self: start;
+}
+}
