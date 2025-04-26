@@ -284,6 +284,12 @@ section p {
     text-align: left;
 }
 
+.results-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .results-table table {
     width: 100%;
     max-width: 800px;
@@ -294,7 +300,7 @@ section p {
 }
 
 .results-table th, .results-table td {
-    padding: 1rem;
+    padding: 1.4rem;
     text-align: left;
     border: 1px solid var(--charcoal);
 }
@@ -513,6 +519,10 @@ footer p {
         padding-top: 1rem;
     }
     
+    #services article {
+        padding: 2rem;
+    }
+    
     .service-grid {
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -528,12 +538,33 @@ footer p {
         justify-content: space-between;
     }
     
+    .results-data {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
     .results-table {
+        width: 50%;
+        margin-top: 2rem;
+    }
+
+   
+    .bar-chart {
         width: 50%;
     }
 
-    .bar-chart {
-        width: 50%;
+    #contact h2 {
+        margin-left: 2rem;
+    }
+
+    #contact p {
+        margin: 1rem;
+        text-align: left;
+    }
+
+    #contact form {
+        max-width: 95%;
     }
 }
 
