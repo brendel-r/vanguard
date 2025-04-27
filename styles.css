@@ -70,7 +70,6 @@ html, body {
     margin: 0 auto;
 }
 
-
 header {
     background-color: var(--black);
     align-items: center;
@@ -364,6 +363,7 @@ section p {
     font-weight: bold;
     color: var(--white);
 }
+
 @keyframes stepUp {
     0% {
         height: 0;
@@ -411,8 +411,10 @@ section p {
   
 #contact label {
     text-align: left;
+    display: block;
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
+    margin-left: 1.3rem;
 }
   
 #contact input, #contact textarea {
@@ -462,6 +464,7 @@ footer a {
 footer p {
     margin: 0.25rem 0;
 }
+
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width: 800px) {
 
@@ -566,72 +569,100 @@ footer p {
     #contact form {
         max-width: 95%;
     }
+
+    #contact label {
+        margin-left: 1.5rem;
+    }
 }
 
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width: 1024px) {
-  #mobile-nav.show {
-padding-right: 10rem;
-}  
+    #mobile-nav.show {
+        padding-right: 10rem;
+    }  
 
-#bar-chart {
-    gap: 4.5rem;
-}
+    #hero p{
+        max-width: 95%;
+    }
 
-#contact form {
+    #bar-chart {
+        gap: 4.5rem;
+    }
+
+    #about h2, #about p {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #about h2 {
+        padding-left: 3rem;
+    }
+
+    #contact-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: .5rem 1rem;
     max-width: 95%;
     margin: 0 auto;
   }
 
-  .form-left, 
-  .form-right {
-    display: flex;
-    flex-direction: column;
+    #contact-form label,
+    #contact-form input,
+    #contact-form textarea,
+    #contact-form button {
+    width: 98%;
+    margin-left: 1rem;
+    }
+
+    #contact-form button{
+        width: 100%;
+    }
+
+    label[for="fullname"],
+    #fullname {
+        grid-column: 1;
+    }
+
+    label[for="email"],
+    #email {
+        grid-column: 2;
+    }
+
+    label[for="company"],
+    #company {
+        grid-column: 1;
+    }
+
+    label[for="industry"],
+    #industry {
+        grid-column: 2;
+    }
+
+    label[for="message"],
+    #message {
+        grid-column: 1;
+    }
+
+    #contact-form button {
+        grid-column: 2;
+        align-self: start;
+    }
+
+    #contact form {
+        display: grid;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
   
-  }
-
-  .form-left input,
-  .form-right input,
-  .form-right textarea,
-  .form-right button {
-    width: 100%;
-  }
-
-.form-left label:nth-of-type(1),
-.form-left input:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.form-right label:nth-of-type(1),
-.form-right input:nth-of-type(1) {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.form-left label:nth-of-type(2),
-.form-left input:nth-of-type(2) {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.form-right label:nth-of-type(2),
-.form-right input:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.form-left label:nth-of-type(3),
-.form-left textarea:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-.form-right button {
-  grid-column: 2;
-  grid-row: 3;
-  align-self: start;
-}
+    #contact label {
+        margin-left: 1.5rem;
+    }
 }
